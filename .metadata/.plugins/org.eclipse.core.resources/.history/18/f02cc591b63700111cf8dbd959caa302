@@ -1,0 +1,61 @@
+package Quiz_260414;
+
+import java.util.Arrays;
+
+public class Quiz_duplicate_delete {
+
+	public static void main(String[] args) {
+		
+		int[] a = {1, 3, 3, 4, 5, 2, 6, 7, 6, 7};
+		System.out.print("초기 배열: ");
+		System.out.println(Arrays.toString(a));
+		System.out.println();
+
+		int[] duplicate_delete = new int[a.length];
+		int count = 0;
+		int temp = 0;
+
+		System.out.println("중복 제거 과정: ");
+		for(int x = 0; x < a.length; x++) {
+			boolean isduplicate = false;
+			
+			for(int y = 0; y < count; y++) {
+				if(a[x] == duplicate_delete[y]) {
+					isduplicate = true;
+				}
+			}
+			
+			if (!isduplicate) {
+	            duplicate_delete[count] = a[x];
+	            count++;
+	            System.out.println(a[x] + " 추가됨");
+	        }
+			if (isduplicate) {
+	            System.out.println(a[x] + " 중복이라 제거됨");
+	        }
+	    }
+		System.out.println();
+		
+		for(int x = 0; x < count; x++) {
+			for(int y = x + 1; y < count; y++) {
+				if(duplicate_delete[x] < duplicate_delete[y]) {
+					
+					System.out.println("swap 발생: " 
+	                        + duplicate_delete[x] + " <-> " + duplicate_delete[y]);
+					
+					temp = duplicate_delete[x];
+					duplicate_delete[x] = duplicate_delete[y];
+					duplicate_delete[y] = temp;
+				}
+			}
+		}
+		
+		System.out.println();
+		System.out.println("내림차순 정렬: ");
+		for(int x = 0; x < count; x++) {
+			System.out.println(duplicate_delete[x]);
+		}
+	}
+	
+
+}

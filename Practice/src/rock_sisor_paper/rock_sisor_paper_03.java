@@ -1,0 +1,37 @@
+// "0","1","2" 만 정상 입력 처리, 그 되는 "잘못된 입력" 출력
+package rock_sisor_paper;
+
+import java.util.Scanner;
+
+public class rock_sisor_paper_03 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		while (true) {
+			System.out.print("입력: ");
+			String input = sc.nextLine();
+			
+			if (!(input.equals("0") || input.equals("1") || input.equals("2") || input.equals("q"))) {
+                System.out.println("잘못된 입력입니다. 다시 입력하세요.");
+                continue;
+			}
+			if (input.equals("0")) {
+				System.out.println("가위");
+			} 
+			else if (input.equals("1")) {
+				System.out.println("바위");
+			} 
+			else if (input.equals("2")) {
+				System.out.println("보");
+			} 
+			else if (input.equals("q")) {
+				System.out.println("종료합니다.");
+				break;
+			} 
+			else {
+				System.out.println("잘못된 입력");
+			}
+	    }
+		sc.close();
+	}
+}

@@ -1,0 +1,30 @@
+package com.smart.quiz_0414;
+
+import com.kopo.quiz_0414.Hello;
+
+public class HelloTest {
+	public static void main(String[] args) {
+		Hello h = new Hello();
+		System.out.println("=== 다른 패키지에서 접근 ===");
+		
+		h.publicMethod();      
+//		h.protectedMethod();
+//		 h.defaultMethod();
+//		 h.privateMethod();
+	}
+	}	
+//class Child extends Hello {
+//	public void test() {
+//		System.out.println("=== 상속 받은 경우 ===");
+//		publicMethod();
+//		protectedMethod();
+//
+//	}
+//}
+//
+//public class HelloTest {
+//	public static void main(String[] args) {
+//		Child c = new Child();
+//		c.test();
+//	}
+//}

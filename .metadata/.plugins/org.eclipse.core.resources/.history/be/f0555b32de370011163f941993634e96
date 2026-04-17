@@ -1,0 +1,49 @@
+package Quiz_260414;
+	
+interface Electric {
+	void charge(); 
+}
+
+abstract class Car {
+	private String model;
+
+	abstract void drive();
+}
+
+class sedan extends Car {
+	@Override
+	void drive() {
+		System.out.println("부드럽게");
+	}
+}
+
+class Truck extends Car {
+	@Override
+	void drive() {
+		System.out.println("짐을 싣고");
+	}
+}
+
+public class abstract_car{
+	public static void main(String[] args) {
+//		sedan s = new sedan();
+//		s.drive();
+//		Truck t = new Truck();
+//		t.drive();
+		
+		Car[] cars = new Car[2];
+		cars[0] = new sedan("소나타");
+		cars[1] = new Truck("포터");
+				for (Car c : cars) {
+					c.drive();
+				}
+	}
+	
+}
+
+
+
+
+
+
+

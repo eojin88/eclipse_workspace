@@ -1,0 +1,106 @@
+package Quiz_260414;
+	
+// 인터페이스 정의
+interface Electric {
+	void charge(); 
+}
+
+// 추상 클래스 작성
+abstract class Car {
+	// 자동차 모델명
+	private String model;
+	// 추상 메서드
+	abstract void drive();
+	
+	public Car(String model) {
+		this.model = model;
+	}
+
+	// getModel 이라는 통로를 통해 이름을 가져와서 출력 
+	public void getModel() {
+		System.out.println( this.model + "입니다.");
+	}
+}
+
+// Sedan 
+class Sedan extends Car implements Electric {
+	public Sedan(String model) {
+		super(model);
+	}
+	
+	@Override
+	void drive() {
+		System.out.println("부드럽게");
+	}
+	
+	@Override
+	public void charge() {
+		System.out.println("세단 충전 중...");
+	}
+}
+
+// Truck
+class Truck extends Car implements Electric {
+	public Truck(String model) {
+		super(model);
+	}
+	
+	@Override
+	void drive() {
+		System.out.println("짐을 싣고");
+	}
+	
+	@Override
+	public void charge() {
+		System.out.println("트럭 충전 중...");
+	}
+}
+
+//Tesla
+class Tesla extends Car implements Electric {
+	public Tesla(String model) {
+		super(model);
+	}
+	
+	@Override
+	void drive() {
+		System.out.println("조용히");
+	}
+	
+	@Override
+	public void charge() {
+		System.out.println("테슬라 충전 중...");
+	}
+}
+
+// 실행
+public class abstract_car {
+	public static void main(String[] args) {
+//		sedan s = new sedan();
+//		s.drive();
+//		Truck t = new Truck();
+//		t.drive();
+
+		Car[] cars = new Car[3];
+		cars[0] = new Sedan("소나타");
+		cars[1] = new Truck("포터");
+		cars[2] = new Tesla("모델3");
+
+		for (Car c : cars) {
+			c.getModel();
+			c.drive();
+
+			// Electric 기능은 형변환 필요
+			if (c instanceof Electric) {
+				((Electric) c).charge();
+			}
+		}
+	}
+
+}
+
+
+
+
+
+

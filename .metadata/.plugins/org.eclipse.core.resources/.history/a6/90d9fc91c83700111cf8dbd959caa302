@@ -1,0 +1,15 @@
+package com.smart;
+
+import com.kopo.Hello;
+
+public class HelloTest {
+	public static void main(String[] args) {
+		Hello h = new Hello();
+		System.out.println("=== 다른 패키지에서 접금 ===");
+		
+		h.publicMethod();      
+		// h.protectedMethod();
+		// h.defaultMethod();
+		// h.privateMethod();
+	}
+}

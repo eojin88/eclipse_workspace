@@ -1,0 +1,40 @@
+package Quiz_260414;
+
+import java.util.Arrays;
+
+public class Quiz_duplicate_delete {
+
+	public static void main(String[] args) {
+		
+		int[] a = {1, 3, 3, 4, 5, 2, 6, 7, 6, 7};
+		System.out.print("초기 배열: ");
+		System.out.println(Arrays.toString(a));
+
+		int[] duplicate_delete = new int[a.length];
+		int count = 0;
+
+		System.out.println("중복 제거 과정: ");
+		for(int x = 0; x < a.length; x++) {
+			boolean isduplicate = false;
+			
+			for(int y = 0; y < count; y++) {
+				if(a[x] == duplicate_delete[y]) {
+					isduplicate = true;
+				}
+			}
+			
+			if (!isduplicate) {
+	            duplicate_delete[count] = a[x];
+	            count++;
+	            System.out.println(a[x] + " 추가됨");
+	        }
+			if (isduplicate) {
+	            System.out.println(a[x] + " 중복이라 제거됨");
+	        }
+	    }
+		
+	}
+	
+	
+
+}

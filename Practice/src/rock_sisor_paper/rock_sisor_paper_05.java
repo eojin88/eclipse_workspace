@@ -1,0 +1,27 @@
+package rock_sisor_paper;
+
+import java.util.Random;
+
+public class rock_sisor_paper_05 {
+	public static void main(String[] args) {
+		Random r = new Random();
+		
+		int num = r.nextInt(3);
+		System.out.println(num);
+		
+		switch (num) {
+			case 0: System.out.println("가위"); break;
+			case 1: System.out.println("바위"); break;
+			case 2: System.out.println("보"); break;
+			default: System.out.println("잘못된 입력");
+//		if (num == 0) {
+//			System.out.println("가위");
+//		}
+//		else if (num == 1) {
+//			System.out.println("바위");
+//		}
+//		else {
+//			System.out.println("보");
+		}
+	}
+}

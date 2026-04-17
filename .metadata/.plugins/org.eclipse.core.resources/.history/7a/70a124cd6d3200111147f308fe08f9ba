@@ -1,0 +1,16 @@
+package rock_sisor_paper;
+
+import java.util.Scanner;
+
+public class rock_sisor_paper_4 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("숫자 입력: ");
+		String input = sc.nextLine();
+		
+		int number = Integer.parseInt(input);
+		System.out.println("입력값 * 2 = " + (number * 2));
+	}
+}
+

@@ -1,0 +1,17 @@
+// 입력값이 "5"면 10 출력되게 (곱하기 2)
+package rock_sisor_paper;
+
+import java.util.Scanner;
+
+public class rock_sisor_paper_04 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("숫자 입력: ");
+		String input = sc.nextLine();
+		
+		int number = Integer.parseInt(input);
+		System.out.println("입력값 * 2 = " + (number * 2));
+	}
+}
+

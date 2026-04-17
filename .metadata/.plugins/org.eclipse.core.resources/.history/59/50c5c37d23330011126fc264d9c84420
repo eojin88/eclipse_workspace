@@ -1,0 +1,21 @@
+package rock_sisor_paper;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class rock_sisor_paper_6 {
+	public static void main(String[] args) {
+		Random ra = new Random();
+		Scanner sc = new Scanner(System.in);
+		
+		int com = ra.nextInt(3);
+		System.out.println("검퓨터: " + com);
+		
+		switch (com) {
+		case 0: System.out.println("가위"); break;
+		case 1: System.out.println("바위"); break;
+		case 2: System.out.println("보"); break;
+		default: System.out.println("잘못된 입력");
+		}
+	}
+}

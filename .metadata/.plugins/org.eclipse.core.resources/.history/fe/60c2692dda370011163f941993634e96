@@ -1,0 +1,26 @@
+package Quiz_260414;
+
+public class abstract_car {
+	
+	abstract class Car {
+		private String model;
+		
+		abstract void drive();
+	}
+	
+	class sedan extends Car {
+		@Override
+		void drive() {
+			System.out.println("sedan success");
+		}
+	}
+	
+	class Truck extends Car {
+		@Override
+		void drive() {
+			System.out.println("Truck success");
+		}
+	}
+
+}
+
